@@ -1,4 +1,5 @@
-setInterval(() => {
+function setClock() {
+    sound = new Audio('tickSound.mp3');
     date = new Date();
     htime = date.getHours();
     mtime = date.getMinutes();
@@ -12,4 +13,9 @@ setInterval(() => {
     hour.style.transform = `rotate(${hrotation}deg)`;
     minute.style.transform = `rotate(${mrotation}deg)`;
     second.style.transform = `rotate(${srotation}deg)`;
-}, 1000);
+    sound.currentTime = 0;
+
+
+};
+
+setInterval(setClock, 1000);
