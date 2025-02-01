@@ -14,6 +14,7 @@ function setClock() {
     minute.style.transform = `rotate(${mrotation}deg)`;
     second.style.transform = `rotate(${srotation}deg)`;
     sound.currentTime = 0;
+    sound.play();
 
 
 };
